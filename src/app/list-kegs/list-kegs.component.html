@@ -21,9 +21,9 @@
     </div>
     <div class="col-sm-2">
       <div *ngIf="employeeView">
-        <button class="btn btn-outline-secondary">Sell</button>
+        <button class="btn btn-outline-secondary" (click)="clickSell(keg)">Sell</button>
         <button class="btn btn-outline-secondary" (click)="clickEditKeg(keg)">Edit</button>
-        <button class="btn btn-outline-secondary">Remove</button>
+        <button class="btn btn-outline-secondary" (click)="clickRemove(keg)">Remove</button>
       </div>
     </div>
   </div>

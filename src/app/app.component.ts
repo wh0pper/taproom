@@ -33,4 +33,8 @@ export class AppComponent {
     console.log(clickedKeg);
   }
 
+  removeKeg(clickedKeg) {
+    let index = this.masterKegList.indexOf(clickedKeg);
+    this.masterKegList.splice(index, 1);
+  }
 }
