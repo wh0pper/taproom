@@ -1,21 +1,29 @@
-<div class="card card-body" *ngFor="let keg of childKegList">
+<div class="card card-body" *ngFor="let keg of childKegList; let i = index">
   <div class="row">
-    <div class="col-md-3 text-center">
+    <div class="col-sm-3 text-center">
       <img class="logo" src={{keg.logo}} alt={{keg.name}}>
       <p>Brand: {{keg.brand}}</p>
     </div>
     <hr>
-    <div class="col-md-7">
+    <div class="col-sm-3">
       <p>Price/Pint: <span [class]="colorCodePrice(keg)">${{keg.price}}</span></p>
       <p>ABV: {{keg.abv}}, IBU: {{keg.ibu}}</p>
       <p>Type: {{keg.type}}</p>
       <p>Pints In Keg: {{keg.pints}}/124</p>
     </div>
-    <div class="col-md-2">
+    <div class="col-sm-4">
+      <div *ngIf="edit === keg">
+        <app-edit-keg [childSelectedKeg]="edit"></app-edit-keg>
+      </div>
+      <div *ngIf="edit !== keg">
+        <p><i>Blurb goes here.</i></p>
+      </div>
+    </div>
+    <div class="col-sm-2">
       <div *ngIf="employeeView">
-        <button >Sell</button>
-        <button (click)="clickEditKeg(keg)" data-toggle="modal" data-target="#exampleModalLong">Edit</button>
-        <button >Remove</button>
+        <button class="btn btn-outline-secondary">Sell</button>
+        <button class="btn btn-outline-secondary" (click)="clickEditKeg(keg)">Edit</button>
+        <button class="btn btn-outline-secondary">Remove</button>
       </div>
     </div>
   </div>

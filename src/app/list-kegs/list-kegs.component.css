@@ -25,3 +25,16 @@
   background-color: #2e0f7a;
   color: white;
 }
+
+button {
+  width: 125px;
+  display: block;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.btn-outline-secondary:not([disabled]):not(.disabled):hover,.btn-outline-secondary:not([disabled]):not(.disabled):focus,.btn-outline-secondary:not([disabled]):not(.disabled):active{
+  color: white;
+  background-color:#747b80;
+  border-color:#747b80;
+}

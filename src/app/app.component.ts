@@ -30,6 +30,7 @@ export class AppComponent {
 
   editKeg(clickedKeg) {
     this.selectedKeg = clickedKeg;
+    console.log(clickedKeg);
   }
 
 }

@@ -11,6 +11,8 @@ export class ListKegsComponent{
   @Input() employeeView: boolean;
   @Output() editKeg = new EventEmitter();
 
+  public edit: Keg = null;
+
   colorCodePrice(currentKeg) {
     if (currentKeg.price === 6) {
       return "highPrice";
@@ -22,7 +24,8 @@ export class ListKegsComponent{
   }
 
   clickEditKeg(currentKeg) {
-    this.editKeg.emit(currentKeg);
+    this.edit = currentKeg;
+    this.editKeg.emit(this.edit);
   }
 
 }
