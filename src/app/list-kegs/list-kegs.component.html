@@ -1,0 +1,9 @@
+<div class="card card-body" *ngFor="let keg of childKegList">
+  <h3>{{keg.name}}</h3>
+  <p>Brand: {{keg.brand}}</p>
+  <hr>
+  <p>Price/Pint: <span [class]="colorCodePrice(keg)">${{keg.price}}</span></p>
+  <p>ABV: {{keg.abv}}, IBU: {{keg.ibu}}</p>
+  <p>Type: {{keg.type}}</p>
+  <p>Pints In Keg: {{keg.pints}}/124</p>
+</div>

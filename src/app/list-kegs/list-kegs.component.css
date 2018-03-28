@@ -1,0 +1,17 @@
+.card {
+  margin-bottom: 10px;
+}
+
+.lowPrice {
+  background-color: #ffff38;
+}
+
+.midPrice {
+  background-color: #117a0f;
+  color: white;
+}
+
+.highPrice {
+  background-color: #2e0f7a;
+  color: white;
+}
