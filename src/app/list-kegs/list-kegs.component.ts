@@ -8,6 +8,8 @@ import { Keg } from '../models/keg.model';
 })
 export class ListKegsComponent{
   @Input() childKegList: Keg[];
+  @Input() employeeView: boolean;
+  @Output() editKeg = new EventEmitter();
 
   colorCodePrice(currentKeg) {
     if (currentKeg.price === 6) {
@@ -17,6 +19,10 @@ export class ListKegsComponent{
     } else {
       return "lowPrice";
     }
+  }
+
+  clickEditKeg(currentKeg) {
+    this.editKeg.emit(currentKeg);
   }
 
 }

@@ -4,12 +4,14 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { ListKegsComponent } from './list-kegs/list-kegs.component';
+import { EditKegComponent } from './edit-keg/edit-keg.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    ListKegsComponent
+    ListKegsComponent,
+    EditKegComponent
   ],
   imports: [
     BrowserModule

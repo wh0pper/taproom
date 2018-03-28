@@ -1,5 +1,15 @@
 .card {
   margin-bottom: 10px;
+  text-align: left;
+}
+
+.logo {
+  width: 125px;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 15px;
 }
 
 .lowPrice {
