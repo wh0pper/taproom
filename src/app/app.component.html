@@ -29,5 +29,5 @@
   <div *ngIf="employeeView">
     <p>'hello, ur an employee!'</p>
   </div>
-  <app-list-kegs [childKegList]="masterKegList" [employeeView]="employeeView" (editKeg)="editKeg($event)" (removeKeg)="removeKeg($event)"></app-list-kegs>
+  <app-list-kegs [childKegList]="masterKegList" [employeeView]="employeeView" (editKeg)="editKeg($event)" (sellKeg)="sellKeg($event)" (removeKeg)="removeKeg($event)"></app-list-kegs>
 </div>

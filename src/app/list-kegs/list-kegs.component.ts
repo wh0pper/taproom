@@ -10,6 +10,7 @@ export class ListKegsComponent{
   @Input() childKegList: Keg[];
   @Input() employeeView: boolean;
   @Output() editKeg = new EventEmitter();
+  @Output() sellKeg = new EventEmitter();
   @Output() removeKeg = new EventEmitter();
 
   public edit: Keg = null;
@@ -27,6 +28,10 @@ export class ListKegsComponent{
   clickEditKeg(currentKeg) {
     this.edit = currentKeg;
     this.editKeg.emit(this.edit);
+  }
+
+  clickSell(currentKeg) {
+    this.sellKeg.emit(currentKeg);
   }
 
   clickRemove(currentKeg) {
