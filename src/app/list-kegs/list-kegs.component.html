@@ -15,8 +15,11 @@
       <div *ngIf="edit === keg">
         <app-edit-keg [childSelectedKeg]="edit"></app-edit-keg>
       </div>
-      <div *ngIf="edit !== keg">
+      <div *ngIf="edit !== keg && sell !== keg">
         <p><i>Blurb goes here.</i></p>
+      </div>
+      <div *ngIf="sell === keg">
+        <app-sell-keg></app-sell-keg>
       </div>
     </div>
     <div class="col-sm-2">

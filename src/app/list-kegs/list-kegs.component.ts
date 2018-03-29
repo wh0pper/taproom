@@ -14,6 +14,7 @@ export class ListKegsComponent{
   @Output() removeKeg = new EventEmitter();
 
   public edit: Keg = null;
+  public sell: Keg = null;
 
   colorCodePrice(currentKeg) {
     if (currentKeg.price === 6) {
@@ -26,11 +27,15 @@ export class ListKegsComponent{
   }
 
   clickEditKeg(currentKeg) {
-    this.edit = currentKeg;
+    this.sell = null;
+    if (this.edit == currentKeg) this.edit = null;
+    else this.edit = currentKeg;
     this.editKeg.emit(this.edit);
   }
 
   clickSell(currentKeg) {
+    this.edit = null;
+    this.sell = currentKeg;
     this.sellKeg.emit(currentKeg);
   }
 

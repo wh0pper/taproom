@@ -6,13 +6,15 @@ import { FormsModule }   from '@angular/forms';
 import { AppComponent } from './app.component';
 import { ListKegsComponent } from './list-kegs/list-kegs.component';
 import { EditKegComponent } from './edit-keg/edit-keg.component';
+import { SellKegComponent } from './sell-keg/sell-keg.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     ListKegsComponent,
-    EditKegComponent
+    EditKegComponent,
+    SellKegComponent
   ],
   imports: [
     BrowserModule,
