@@ -17,9 +17,9 @@ export class ListKegsComponent{
   public sell: Keg = null;
 
   colorCodePrice(currentKeg) {
-    if (currentKeg.price === 6) {
+    if (currentKeg.price >= 7) {
       return "highPrice";
-    } else if (currentKeg.price === 5) {
+    } else if (currentKeg.price >= 4) {
       return "midPrice";
     } else {
       return "lowPrice";

@@ -26,8 +26,9 @@
   </div>
 </nav>
 <div class="container text-center">
-  <div *ngIf="employeeView">
-    <p>'hello, ur an employee!'</p>
-  </div>
+  <div *ngIf="employeeView;then employee; else patron"></div>
+    <ng-template #employee><h2 style="color: whitesmoke;">Employee View Active</h2></ng-template>
+    <ng-template #patron><h2 style="color: whitesmoke;">Current Draft Selection:</h2></ng-template>
+
   <app-list-kegs [childKegList]="masterKegList" [employeeView]="employeeView" (editKeg)="editKeg($event)" (removeKeg)="removeKeg($event)" (sendSaleInfo)="makeSale($event)"></app-list-kegs>
 </div>
