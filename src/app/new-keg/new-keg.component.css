@@ -1,0 +1,15 @@
+.card {
+  margin-bottom: 100px;
+  text-align: left;
+  color: black;
+  padding-top: 0;
+}
+
+label {
+  margin-top: 10px;
+  padding: 0;
+}
+
+input.form-control {
+  height: 35px;
+}

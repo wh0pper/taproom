@@ -7,6 +7,7 @@ import { Component, Output, EventEmitter } from '@angular/core';
 })
 export class SellKegComponent {
   @Output() sendSale = new EventEmitter();
+  
 
   submitForm(type: string, quantity: string) {
     let number = parseInt(quantity) * parseInt(type);

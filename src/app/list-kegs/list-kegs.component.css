@@ -31,11 +31,32 @@ button {
   width: 125px;
   display: block;
   margin-top: auto;
-  margin-bottom: auto;
+  margin-bottom: 5px;
 }
 
 .btn-outline-secondary:not([disabled]):not(.disabled):hover,.btn-outline-secondary:not([disabled]):not(.disabled):focus,.btn-outline-secondary:not([disabled]):not(.disabled):active{
   color: white;
   background-color:#747b80;
   border-color:#747b80;
+}
+
+i {
+  opacity: .6;
+}
+
+.remove:hover {
+  background-color: #8e1200 !important;
+}
+
+.new-button {
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+  width: 200px;
+  display: block;
+  margin: 0 auto;
+}
+
+.new-button:hover {
+  background-color: whitesmoke;
+  color: grey;
 }

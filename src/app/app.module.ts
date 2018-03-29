@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { ListKegsComponent } from './list-kegs/list-kegs.component';
 import { EditKegComponent } from './edit-keg/edit-keg.component';
 import { SellKegComponent } from './sell-keg/sell-keg.component';
+import { NewKegComponent } from './new-keg/new-keg.component';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { SellKegComponent } from './sell-keg/sell-keg.component';
     AppComponent,
     ListKegsComponent,
     EditKegComponent,
-    SellKegComponent
+    SellKegComponent,
+    NewKegComponent
   ],
   imports: [
     BrowserModule,

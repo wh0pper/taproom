@@ -1,3 +1,4 @@
+<button *ngIf="employeeView" (click)="newKeg()" type="button" class="btn btn-secondary new-button">Add a new keg</button><br>
 <div class="card card-body" *ngFor="let keg of childKegList; let i = index">
   <div class="row">
     <div class="col-sm-3 text-center">
@@ -16,7 +17,7 @@
         <app-edit-keg [childSelectedKeg]="edit"></app-edit-keg>
       </div>
       <div *ngIf="edit !== keg && sell !== keg">
-        <p><i>Blurb goes here.</i></p>
+        <p><i>{{keg.blurb}}</i></p>
       </div>
       <div *ngIf="sell === keg">
         <app-sell-keg (sendSale)="makeSale($event)"></app-sell-keg>
@@ -26,8 +27,10 @@
       <div *ngIf="employeeView">
         <button class="btn btn-outline-secondary" (click)="clickSell(keg)">Sell</button>
         <button class="btn btn-outline-secondary" (click)="clickEditKeg(keg)">Edit</button>
-        <button class="btn btn-outline-secondary" (click)="clickRemove(keg)">Remove</button>
+        <button class="btn btn-outline-secondary remove" (click)="clickRemove(keg)">Remove</button>
       </div>
     </div>
   </div>
 </div>
+
+<app-new-keg (newKegEmitter)="populateNewKegInfo($event)" *ngIf="newKegToPopulate"></app-new-keg>

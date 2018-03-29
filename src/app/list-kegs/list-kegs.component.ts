@@ -9,12 +9,15 @@ import { Keg } from '../models/keg.model';
 export class ListKegsComponent{
   @Input() childKegList: Keg[];
   @Input() employeeView: boolean;
+  @Input() newKeg: Keg;
   @Output() editKeg = new EventEmitter();
   @Output() sendSaleInfo = new EventEmitter();
   @Output() removeKeg = new EventEmitter();
+  @Output() sendNewKegToApp = new EventEmitter();
 
   public edit: Keg = null;
   public sell: Keg = null;
+  public newKegToPopulate: boolean = false;
 
   colorCodePrice(currentKeg) {
     if (currentKeg.price >= 7) {
@@ -35,7 +38,8 @@ export class ListKegsComponent{
 
   clickSell(currentKeg) {
     this.edit = null;
-    this.sell = currentKeg;
+    if (this.sell == currentKeg) this.sell = null;
+    else this.sell = currentKeg;
   }
 
   makeSale(number) {
@@ -47,6 +51,15 @@ export class ListKegsComponent{
 
   clickRemove(currentKeg) {
     this.removeKeg.emit(currentKeg);
+  }
+
+  newKeg() {
+    this.newKegToPopulate = true;
+  }
+
+  populateNewKegInfo(newKeg) {
+    this.childKegList.push(newKeg);
+    this.sendNewKegToApp.emit(newKeg);
   }
 
 }

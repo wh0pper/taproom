@@ -1,0 +1,28 @@
+<div class="card card-body">
+  <div class="row">
+    <div class="col-sm-4">
+      <label>Name:</label>
+      <input class="form-control" type="text" #newName>
+      <label>Logo URL:</label>
+      <input class="form-control" type="text" #newImageURL>
+      <label>Brand:</label>
+      <input class="form-control" type="text" #newBrand>
+    </div>
+    <hr>
+    <div class="col-sm-4">
+      <label>Price/Pint:</label>
+      <input class="form-control" type="number" #newPrice>
+      <label>ABV:</label>
+      <input class="form-control" type="number" #newAbv>
+      <label>IBU:</label>
+      <input class="form-control" type="number" #newIbu>
+    </div>
+    <div class="col-sm-4">
+      <label>Type:</label>
+      <input class="form-control" type="text" #newType>
+      <label>Information:</label>
+      <textarea class="form-control" #newBlurb></textarea><br>
+      <button class="btn btn-primary" (click)="submitNewKegInfo(newName.value, newBrand.value, newPrice.value, newAbv.value, newIbu.value, newType.value, newImageURL.value, newBlurb.value)">Submit</button>
+    </div>
+  </div>
+</div>
