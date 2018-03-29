@@ -24,13 +24,13 @@
       </div>
     </div>
     <div class="col-sm-3">
-      <div *ngIf="edit === keg">
+      <div *ngIf="edit === keg && employeeView == true">
         <app-edit-keg [childSelectedKeg]="edit"></app-edit-keg>
       </div>
-      <div *ngIf="edit !== keg && sell !== keg">
+      <div *ngIf="(edit !== keg && sell !== keg) || employeeView == false">
         <p><i>{{keg.blurb}}</i></p>
       </div>
-      <div *ngIf="sell === keg">
+      <div *ngIf="sell === keg && employeeView == true">
         <app-sell-keg (sendSale)="makeSale($event)"></app-sell-keg>
       </div>
   </div>
