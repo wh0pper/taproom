@@ -19,7 +19,7 @@
         <p><i>Blurb goes here.</i></p>
       </div>
       <div *ngIf="sell === keg">
-        <app-sell-keg></app-sell-keg>
+        <app-sell-keg (sendSale)="makeSale($event)"></app-sell-keg>
       </div>
     </div>
     <div class="col-sm-2">

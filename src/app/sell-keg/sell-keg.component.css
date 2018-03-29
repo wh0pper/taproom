@@ -1,0 +1,23 @@
+.input-group-text {
+  padding: .2rem;
+  width: 75px;
+}
+
+.input-group-prepend {
+  width: 75px;
+}
+
+.wide {
+  width: 125px;
+}
+
+select.form-control:not([size]):not([multiple]) {
+  height: calc(1rem + 10px);
+  width: 200px;
+}
+
+button {
+  margin-top: 10px;
+  background-color:#747b80;
+  border-color:#747b80;
+}

@@ -10,7 +10,7 @@ export class ListKegsComponent{
   @Input() childKegList: Keg[];
   @Input() employeeView: boolean;
   @Output() editKeg = new EventEmitter();
-  @Output() sellKeg = new EventEmitter();
+  @Output() sendSaleInfo = new EventEmitter();
   @Output() removeKeg = new EventEmitter();
 
   public edit: Keg = null;
@@ -36,7 +36,13 @@ export class ListKegsComponent{
   clickSell(currentKeg) {
     this.edit = null;
     this.sell = currentKeg;
-    this.sellKeg.emit(currentKeg);
+  }
+
+  makeSale(number) {
+    let saleArray = [];
+    saleArray.push(this.sell);
+    saleArray.push(number);
+    this.sendSaleInfo.emit(saleArray);
   }
 
   clickRemove(currentKeg) {

@@ -1,1 +1,15 @@
-<input type="text" #sellNum>
+<div class="form-group">
+      <select class="form-control" id="exampleSelect1" #sellType>
+        <option value="1">Pint</option>
+        <option value="2">32oz Growler</option>
+        <option value="4">64oz Growler</option>
+      </select>
+    </div>
+<div class="input-group mb-1">
+  <div class="input-group-prepend">
+    <span class="input-group-text">Quantity</span>
+  </div>
+  <input class="wide" type="text" title="Quantity" #sellNum>
+</div>
+
+<button type="button" class="btn btn-primary btn-sm" (click)="submitForm(sellType.value, sellNum.value);">Make Sale</button>

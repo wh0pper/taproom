@@ -30,11 +30,16 @@ export class AppComponent {
 
   editKeg(clickedKeg) {
     this.selectedKeg = clickedKeg;
-    console.log(clickedKeg);
   }
 
-  sellKeg(clickedKeg) {
-    clickedKeg.pints--;
+  makeSale(saleArray) {
+    this.selectedKeg = saleArray[0];
+    console.log(saleArray[0]);
+    let index = this.masterKegList.indexOf(this.selectedKeg);
+    if (this.selectedKeg.pints >= saleArray[1]) {
+      this.selectedKeg.pints = this.selectedKeg.pints - saleArray[1];
+    }
+    this.masterKegList[index] = this.selectedKeg;
   }
 
   removeKeg(clickedKeg) {
