@@ -53,7 +53,7 @@ export class ListKegsComponent{
     this.removeKeg.emit(currentKeg);
   }
 
-  newKeg() {
+  passNewKeg() {
     this.newKegToPopulate = true;
   }
 
